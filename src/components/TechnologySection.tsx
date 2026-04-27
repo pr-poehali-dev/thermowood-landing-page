@@ -54,9 +54,9 @@ export default function TechnologySection() {
       {/* Background: factory image */}
       <div className="absolute inset-0 pointer-events-none">
         <img
-          src="https://cdn.poehali.dev/projects/55094b77-cc92-4972-838f-6f5eb56fa658/files/7f722eeb-0951-4147-aeb7-4241408299c7.jpg"
+          src="https://cdn.poehali.dev/projects/55094b77-cc92-4972-838f-6f5eb56fa658/bucket/6d33a12c-e86c-4e9d-9ae7-1ef26456b1bc.jpg"
           alt=""
-          className="w-full h-full object-cover object-center opacity-10"
+          className="w-full h-full object-cover object-center opacity-8"
         />
         <div className="absolute inset-0" style={{
           background: 'linear-gradient(90deg, rgba(10,7,4,0.0) 0%, rgba(10,7,4,0.85) 40%, rgba(10,7,4,1) 100%)'
@@ -86,14 +86,14 @@ export default function TechnologySection() {
 
             <div className="section-reveal rounded-xl overflow-hidden border border-amber-500/20 relative group">
               <img
-                src="https://cdn.poehali.dev/projects/55094b77-cc92-4972-838f-6f5eb56fa658/files/7f722eeb-0951-4147-aeb7-4241408299c7.jpg"
-                alt="Деревообрабатывающее производство"
-                className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
+                src="https://cdn.poehali.dev/projects/55094b77-cc92-4972-838f-6f5eb56fa658/bucket/6d33a12c-e86c-4e9d-9ae7-1ef26456b1bc.jpg"
+                alt="Термокамера для обработки древесины"
+                className="w-full aspect-video object-cover object-center transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <p className="font-body text-sm text-amber-300/90">
-                  Современное деревообрабатывающее производство — термокамеры объёмом до 120 м³
+                  Наша термокамера — загрузка до 12 м³ пиломатериала за цикл
                 </p>
               </div>
             </div>
@@ -101,13 +101,13 @@ export default function TechnologySection() {
             <div className="section-reveal grid grid-cols-2 gap-3 mt-4">
               <div className="rounded-xl overflow-hidden border border-amber-500/15 relative group">
                 <img
-                  src="https://cdn.poehali.dev/projects/55094b77-cc92-4972-838f-6f5eb56fa658/files/bea1f31e-0c4d-4a9f-b55d-e3a4c8e7117c.jpg"
-                  alt="Термокамера"
+                  src="https://cdn.poehali.dev/projects/55094b77-cc92-4972-838f-6f5eb56fa658/files/17e166bd-c4a6-4cab-87f2-4b5c008b0250.jpg"
+                  alt="Деревообрабатывающий цех"
                   className="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 <div className="absolute bottom-2 left-3">
-                  <span className="font-body text-xs text-amber-300/80">Термокамера 200°C</span>
+                  <span className="font-body text-xs text-amber-300/80">Цех обработки</span>
                 </div>
               </div>
               <div className="rounded-xl overflow-hidden border border-amber-500/15 relative group">
