@@ -72,16 +72,31 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen hero-bg flex items-center overflow-hidden">
-      <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" />
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Full-screen background image */}
+      <div className="absolute inset-0">
+        <img
+          src="https://cdn.poehali.dev/projects/55094b77-cc92-4972-838f-6f5eb56fa658/files/ee9b7876-4999-492a-9159-ee7b020b8ae0.jpg"
+          alt="Фасад дома из термодревесины"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(105deg, rgba(10,7,4,0.92) 0%, rgba(10,7,4,0.75) 45%, rgba(10,7,4,0.35) 100%)'
+        }} />
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(to top, rgba(10,7,4,0.7) 0%, transparent 40%)'
+        }} />
+      </div>
 
-      <div className="absolute inset-0 opacity-10"
+      <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none z-10" />
+
+      <div className="absolute inset-0 z-10 opacity-8"
         style={{
-          backgroundImage: `repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(245,158,11,0.05) 60px, rgba(245,158,11,0.05) 61px)`,
+          backgroundImage: `repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(245,158,11,0.04) 60px, rgba(245,158,11,0.04) 61px)`,
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-16 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-20 max-w-7xl mx-auto px-6 pt-24 pb-16 grid lg:grid-cols-2 gap-16 items-center">
         <div>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amber-500/30 bg-amber-500/10 mb-6 animate-fade-in">
             <div className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
@@ -132,34 +147,55 @@ export default function HeroSection() {
         </div>
 
         <div className="relative hidden lg:block">
-          <div className="relative w-full aspect-square max-w-lg mx-auto animate-float">
-            <div className="absolute inset-0 rounded-2xl overflow-hidden">
+          <div className="relative animate-float">
+            {/* Main terrace image */}
+            <div className="rounded-2xl overflow-hidden border border-amber-500/20 shadow-2xl"
+              style={{ boxShadow: '0 40px 80px rgba(0,0,0,0.6), 0 0 60px rgba(245,158,11,0.08)' }}>
               <img
-                src="https://cdn.poehali.dev/projects/55094b77-cc92-4972-838f-6f5eb56fa658/files/1276de24-228e-4f64-8df9-2d3b5dae28cc.jpg"
+                src="https://cdn.poehali.dev/projects/55094b77-cc92-4972-838f-6f5eb56fa658/files/eae72ef7-698e-4525-8805-9eefc6c8be67.jpg"
                 alt="Терраса из термодревесины"
-                className="w-full h-full object-cover"
+                className="w-full aspect-[4/3] object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent rounded-2xl" />
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                <div>
+                  <div className="font-body text-xs text-amber-300/80 tracking-widest uppercase">Реализованный проект</div>
+                  <div className="font-display text-base font-semibold">Терраса 180 м² · Подмосковье</div>
+                </div>
+                <div className="w-9 h-9 rounded-full bg-amber-500/20 border border-amber-500/40 flex items-center justify-center">
+                  <span className="text-amber-400 text-xs font-display font-bold">→</span>
+                </div>
+              </div>
             </div>
-            <div className="absolute -bottom-6 -left-6 w-36 h-36 rounded-xl overflow-hidden border-2 border-amber-500/30">
+
+            {/* Factory badge */}
+            <div className="absolute -bottom-5 -left-6 w-44 rounded-xl overflow-hidden border-2 border-amber-500/30 shadow-xl">
               <img
-                src="https://cdn.poehali.dev/projects/55094b77-cc92-4972-838f-6f5eb56fa658/files/1008b696-f170-43dc-976c-637335f043dd.jpg"
-                alt="Сауна из термодревесины"
-                className="w-full h-full object-cover"
+                src="https://cdn.poehali.dev/projects/55094b77-cc92-4972-838f-6f5eb56fa658/files/7f722eeb-0951-4147-aeb7-4241408299c7.jpg"
+                alt="Производство термодревесины"
+                className="w-full h-28 object-cover"
               />
+              <div className="bg-black/80 px-3 py-2">
+                <div className="font-body text-xs text-amber-400/80 tracking-wider">Наше производство</div>
+              </div>
             </div>
-            <div className="absolute -top-4 -right-4 w-28 h-28 rounded-xl overflow-hidden border-2 border-amber-500/30">
+
+            {/* Facade small */}
+            <div className="absolute -top-5 -right-5 w-36 rounded-xl overflow-hidden border-2 border-amber-500/30 shadow-xl">
               <img
-                src="https://cdn.poehali.dev/projects/55094b77-cc92-4972-838f-6f5eb56fa658/files/504c1bc6-8ecb-4206-80ad-b149187f2e05.jpg"
-                alt="Интерьер из термодревесины"
-                className="w-full h-full object-cover"
+                src="https://cdn.poehali.dev/projects/55094b77-cc92-4972-838f-6f5eb56fa658/files/2d6d86e2-512f-4cb6-aff8-da2de5c2663e.jpg"
+                alt="Фасад из термодревесины"
+                className="w-full h-28 object-cover"
               />
+              <div className="bg-black/80 px-3 py-2">
+                <div className="font-body text-xs text-amber-400/80 tracking-wider">Фасады</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-20">
         <Icon name="ChevronDown" size={28} className="text-amber-500/60" />
       </div>
     </section>

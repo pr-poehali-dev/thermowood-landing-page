@@ -51,6 +51,19 @@ export default function TechnologySection() {
 
   return (
     <section id="technology" ref={sectionRef} className="py-24 relative overflow-hidden">
+      {/* Background: factory image */}
+      <div className="absolute inset-0 pointer-events-none">
+        <img
+          src="https://cdn.poehali.dev/projects/55094b77-cc92-4972-838f-6f5eb56fa658/files/7f722eeb-0951-4147-aeb7-4241408299c7.jpg"
+          alt=""
+          className="w-full h-full object-cover object-center opacity-10"
+        />
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(90deg, rgba(10,7,4,0.0) 0%, rgba(10,7,4,0.85) 40%, rgba(10,7,4,1) 100%)'
+        }} />
+        <div className="absolute inset-0 bg-background/70" />
+      </div>
+
       <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-5"
         style={{ background: 'radial-gradient(circle, #F59E0B 0%, transparent 70%)' }}
       />
@@ -71,16 +84,42 @@ export default function TechnologySection() {
               </p>
             </div>
 
-            <div className="section-reveal rounded-xl overflow-hidden border border-amber-500/20">
+            <div className="section-reveal rounded-xl overflow-hidden border border-amber-500/20 relative group">
               <img
-                src="https://cdn.poehali.dev/projects/55094b77-cc92-4972-838f-6f5eb56fa658/files/bea1f31e-0c4d-4a9f-b55d-e3a4c8e7117c.jpg"
-                alt="Процесс термообработки древесины"
-                className="w-full aspect-video object-cover"
+                src="https://cdn.poehali.dev/projects/55094b77-cc92-4972-838f-6f5eb56fa658/files/7f722eeb-0951-4147-aeb7-4241408299c7.jpg"
+                alt="Деревообрабатывающее производство"
+                className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="p-4 bg-amber-500/5">
-                <p className="font-body text-sm text-amber-300/80 text-center">
-                  Термокамера при температуре 200°C — сердце нашего производства
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-5">
+                <p className="font-body text-sm text-amber-300/90">
+                  Современное деревообрабатывающее производство — термокамеры объёмом до 120 м³
                 </p>
+              </div>
+            </div>
+
+            <div className="section-reveal grid grid-cols-2 gap-3 mt-4">
+              <div className="rounded-xl overflow-hidden border border-amber-500/15 relative group">
+                <img
+                  src="https://cdn.poehali.dev/projects/55094b77-cc92-4972-838f-6f5eb56fa658/files/bea1f31e-0c4d-4a9f-b55d-e3a4c8e7117c.jpg"
+                  alt="Термокамера"
+                  className="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute bottom-2 left-3">
+                  <span className="font-body text-xs text-amber-300/80">Термокамера 200°C</span>
+                </div>
+              </div>
+              <div className="rounded-xl overflow-hidden border border-amber-500/15 relative group">
+                <img
+                  src="https://cdn.poehali.dev/projects/55094b77-cc92-4972-838f-6f5eb56fa658/files/eae72ef7-698e-4525-8805-9eefc6c8be67.jpg"
+                  alt="Готовая терраса"
+                  className="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute bottom-2 left-3">
+                  <span className="font-body text-xs text-amber-300/80">Готовая терраса</span>
+                </div>
               </div>
             </div>
           </div>
